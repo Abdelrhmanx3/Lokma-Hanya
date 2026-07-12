@@ -29,13 +29,18 @@ function Card({ id, img, name, price, categorySlug }: CardProps) {
                             <Typography size="xl" weight="bold">
                                 {name}
                             </Typography>
-                            <Typography
-                                color="primary"
-                                size="xl"
-                                weight="semibold"
-                            >
-                                {price}
-                            </Typography>
+                            <div className="flex gap-1">
+                                <Typography
+                                    color="primary"
+                                    size="xl"
+                                    weight="semibold"
+                                >
+                                    {price}
+                                </Typography>
+                                <Typography color="primary" weight="semibold">
+                                    ج.م
+                                </Typography>
+                            </div>
                         </div>
                     </div>
                 </div>
