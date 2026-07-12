@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description:
         "Lokma Hanya brings traditional home-style dishes to your table — from fresh salads and stuffed vegetables to slow-cooked meats and poultry. Explore our full menu and order online.",
     icons: {
-        icon: "/logo.png",
+        icon: "public/logo.png",
     },
 };
 
