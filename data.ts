@@ -27,14 +27,14 @@ export const menu: MenuCategory[] = [
         price: 50,
         description:
           "تشكيلة طازجة من الطماطم والخيار والفلفل والبصل، بلمسة ليمون منعشة تفتح الشهية.",
-        image: "/images/salad/saladBaldi.png",
+        image: "/images/salad/SaladBaldi.png",
       },
       {
         id: "salad-special",
         name: "سلطة سبيشال",
         price: 70,
         description: "تشكيلة مميزة من أجود الخضروات الطازجة بلمسة خاصة.",
-        image: "/images/salad/saladBaldi.png",
+        image: "/images/salad/SaladBaldi.png",
 
       },
       {
