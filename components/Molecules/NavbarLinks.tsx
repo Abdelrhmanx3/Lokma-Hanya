@@ -9,6 +9,7 @@ function NavbarLinks() {
                 <div key={link.label}>
                     <Link
                         href={link.href}
+                        target={link.target}
                         className="flex gap-1.5 items-center group"
                     >
                         <Typography
