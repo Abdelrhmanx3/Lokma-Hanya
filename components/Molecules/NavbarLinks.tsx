@@ -10,11 +10,11 @@ function NavbarLinks() {
                     <Link
                         href={link.href}
                         target={link.target}
-                        className="flex gap-1.5 items-center group"
+                        className="flex gap-3 items-center group"
                         prefetch
                     >
                         <Typography
-                            className="text-foreground group-hover:text-primary transition-colors"
+                            className="text-foreground group-hover:text-primary transition-colors max-md:text-[14px]!"
                             size="lg"
                             weight="semibold"
                         >

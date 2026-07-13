@@ -47,7 +47,7 @@ function Navbar() {
                         `}
                     >
                         <Image
-                            src="/logo.png"
+                            src="/logo.webp"
                             alt="logo"
                             width={isTablet ? 30 : 60}
                             height={isTablet ? 30 : 60}
@@ -57,7 +57,7 @@ function Navbar() {
 
                     <NavbarLinks />
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 max-md:gap-1">
                         <Cart />
                         <div className="h-5 w-px bg-gradient-to-b from-transparent via-[#D9A441]/70 to-transparent" />
                         <ThemeToggle />
