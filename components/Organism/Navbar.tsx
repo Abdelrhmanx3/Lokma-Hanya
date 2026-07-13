@@ -1,32 +1,72 @@
+"use client";
 import Image from "next/image";
 import NavbarLinks from "../Molecules/NavbarLinks";
 import ThemeToggle from "../Molecules/ThemeToggle";
 import Cart from "./Cart";
+import { useMediaQuery } from "@base-ui/react/unstable-use-media-query";
+import { cn } from "@/lib/utils";
 
 function Navbar() {
+    const isTablet = useMediaQuery("(max-width:1024px)", {});
     return (
-        <div className="relative z-20 shadow-2xl">
+        <header
+            className={cn([
+                "z-50 w-full pointer-events-none",
+                isTablet ? "fixed" : "relative mt-4",
+            ])}
+        >
             <div
-                className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2"
-                dir="rtl"
+                className={`pointer-events-auto ${
+                    isTablet
+                        ? " fixed bottom-5 left-4 right-4"
+                        : " top-5 left-0 right-0 max-w-6xl px-5 mx-auto"
+                }`}
             >
-                <div className="flex items-center justify-between w-full">
-                    {/* logo */}
-                    <Image
-                        src={"/logo.png"}
-                        alt="logo"
-                        width={75}
-                        height={75}
-                        className="scale-x-[-1]"
-                    />
+                <nav
+                    dir="rtl"
+                    className={`
+                        relative flex items-center justify-between
+                        ${
+                            isTablet
+                                ? "rounded-3xl px-5 py-3"
+                                : "rounded-full px-4 py-2"
+                        }
+                        bg-background
+                        backdrop-blur-2xl
+                        backdrop-saturate-150
+                        border border-[#5C6A4B]/40
+                        shadow-md
+                    `}
+                >
+                    {/* Logo — wax-seal ring */}
+                    <div
+                        className={`
+                            relative flex items-center justify-center rounded-full
+                            ${isTablet ? "p-1" : "p-1.5"}
+                            border border-dashed border-[#D9A441]/40
+                            hover:border-solid hover:border-[#D9A441]
+                            transition-all duration-300
+                        `}
+                    >
+                        <Image
+                            src="/logo.png"
+                            alt="logo"
+                            width={isTablet ? 30 : 60}
+                            height={isTablet ? 30 : 60}
+                            className="rounded-full transition-transform duration-300 hover:scale-105"
+                        />
+                    </div>
+
                     <NavbarLinks />
-                    <div className="flex items-center">
+
+                    <div className="flex items-center gap-4">
                         <Cart />
+                        <div className="h-5 w-px bg-gradient-to-b from-transparent via-[#D9A441]/70 to-transparent" />
                         <ThemeToggle />
                     </div>
-                </div>
+                </nav>
             </div>
-        </div>
+        </header>
     );
 }
 
