@@ -24,27 +24,27 @@ function AddToCart({ id, categorySlug, name, price, img }: AddToCartProps) {
     return (
         <div className="mt-4">
             <div className="flex items-center gap-4 mt-5">
-                <div className="flex items-center gap-3 bg-background rounded-full px-1 py-1">
+                <div className="flex items-center gap-3 bg-primary text-white shadow-sm rounded-full px-1 py-1">
                     <button
                         onClick={() => setQuantity((q) => q + 1)}
-                        className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-background transition-colors duration-300"
+                        className="size-10 flex items-center justify-center rounded-full hover:bg-background hover:text-black dark:hover:text-white transition-colors duration-300 cursor-pointer"
                     >
-                        <Add01Icon className="w-4 h-4 cursor-pointer" />
+                        <Add01Icon className="size-6 pointer-events-none" />
                     </button>
-                    <span className="w-6 text-center font-bold">
+                    <span className="w-6 text-center font-bold tabular-nums text-xl">
                         {quantity}
                     </span>
                     <button
                         onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                        className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-background transition-colors duration-300"
+                        className="size-10 flex items-center justify-center rounded-full hover:bg-background hover:text-black dark:hover:text-white transition-colors duration-300 cursor-pointer"
                     >
-                        <MinusSignIcon className="w-4 h-4 cursor-pointer" />
+                        <MinusSignIcon className="w-4 h-4 pointer-events-none" />
                     </button>
                 </div>
 
                 <Button
                     onClick={handleAdd}
-                    className="flex-1 py-6 font-bold cursor-pointer"
+                    className="flex-1 py-6 font-bold cursor-pointer text-lg text-white"
                 >
                     أضف للسلة
                 </Button>

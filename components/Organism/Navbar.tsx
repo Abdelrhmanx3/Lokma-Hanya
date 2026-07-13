@@ -13,11 +13,12 @@ function Navbar() {
                 <div className="flex items-center justify-between w-full">
                     {/* logo */}
                     <Image
-                        src={"/logo.png"}
+                        src={"/logo.webp"}
                         alt="logo"
                         width={75}
                         height={75}
-                        className="scale-x-[-1]"
+                        fetchPriority="high"
+                        preload
                     />
                     <NavbarLinks />
                     <div className="flex items-center">

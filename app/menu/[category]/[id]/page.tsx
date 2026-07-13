@@ -25,7 +25,8 @@ async function Page({ params }: PageProps) {
                 href={`/menu`}
                 className="inline-flex items-center gap-2 text-neutral-500 hover:text-primary transition-colors mb-6"
             >
-                <ArrowRight size={18} />
+                <ArrowRight size={40} />
+                <span className="font-semibold text-2xl">العودة للمنيو</span>
             </Link>
 
             <div
@@ -40,6 +41,9 @@ async function Page({ params }: PageProps) {
                             width={700}
                             height={700}
                             className="w-full h-auto object-cover"
+                            placeholder="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8WKReDwAF8QILlMDYSAAAAABJRU5ErkJggg=="
+                            preload
+                            fetchPriority="high"
                         />
                     </div>
                 </div>

@@ -27,14 +27,14 @@ export const menu: MenuCategory[] = [
         price: 50,
         description:
           "تشكيلة طازجة من الطماطم والخيار والفلفل والبصل، بلمسة ليمون منعشة تفتح الشهية.",
-        image: "/images/salad/SaladBaldi.png",
+        image: "/images/salad/SaladBaldi.webp",
       },
       {
         id: "salad-special",
         name: "سلطة سبيشال",
         price: 70,
         description: "تشكيلة مميزة من أجود الخضروات الطازجة بلمسة خاصة.",
-        image: "/images/salad/SaladBaldi.png",
+        image: "/images/salad/SaladBaldi.webp",
 
       },
       {
@@ -42,7 +42,7 @@ export const menu: MenuCategory[] = [
         name: "سلطة طحينة",
         price: 70,
         description: "طحينة كريمية ناعمة متبلة بالليمون والثوم بنكهة أصيلة.",
-        image: "/images/salad/tahiniSalad.png",
+        image: "/images/salad/tahiniSalad.webp",
 
       },
       {
@@ -50,7 +50,7 @@ export const menu: MenuCategory[] = [
         name: "سلطة زبادي بالخيار",
         price: 80,
         description: "زبادي طازج ممزوج بالخيار والنعناع، طبق منعش وخفيف.",
-        image: "/images/salad/yougurtSalad.png",
+        image: "/images/salad/yougurtSalad.webp",
 
       },
       {
@@ -58,7 +58,7 @@ export const menu: MenuCategory[] = [
         name: "سلطة كول سلو",
         price: 80,
         description: "ملفوف وجزر مقرمش بصوص كريمي غني ولذيذ.",
-        image: "/images/salad/colslow.png",
+        image: "/images/salad/colslow.webp",
 
       },
       {
@@ -66,7 +66,7 @@ export const menu: MenuCategory[] = [
         name: "سلطة بابا غنوج",
         price: 70,
         description: "باذنجان مشوي مهروس ممزوج بالطحينة والثوم بنكهة مدخنة مميزة.",
-        image: "/images/salad/babaGnoug.png",
+        image: "/images/salad/babaGnoug.webp",
 
       },
       {
@@ -74,7 +74,7 @@ export const menu: MenuCategory[] = [
         name: "باذنجان مخلل",
         price: 50,
         description: "باذنجان محشي بتتبيلة الثوم والفلفل، مخلل بطريقة بيتي أصيلة.",
-        image: "/images/salad/PickeldEggPlanet.png",
+        image: "/images/salad/PickeldEggPlanet.webp",
 
       },
       {
@@ -82,7 +82,7 @@ export const menu: MenuCategory[] = [
         name: "طماطم مخللة",
         price: 50,
         description: "طماطم متبلة ومخللة بنكهة مميزة، إضافة منعشة لأي طبق.",
-        image: "/images/salad/pickeldTomato.png",
+        image: "/images/salad/pickeldTomato.webp",
 
       },
     ],
@@ -98,7 +98,7 @@ export const menu: MenuCategory[] = [
         price: 400,
         unit: "1 كيلو",
         description: "1 كيلو – رقائق مقرمشة محشوة بلحمة مفرومة متبلة بالبهارات الشرقية.",
-        image: "/images/appetizers/sambosakMeat.png",
+        image: "/images/appetizers/sambosakMeat.webp",
 
 
       },
@@ -108,7 +108,7 @@ export const menu: MenuCategory[] = [
         price: 350,
         unit: "1 كيلو",
         description: "1 كيلو – رقائق ذهبية مقرمشة محشوة بالجبنة الذائبة الشهية.",
-        image: "/images/appetizers/sambosakCheese.png",
+        image: "/images/appetizers/sambosakCheese.webp",
 
 
       },
@@ -118,7 +118,7 @@ export const menu: MenuCategory[] = [
         price: 150,
         unit: "رغيف",
         description: "رغيف – خبز بلدي محشو باللحم المفروم المتبل ومخبوز حتى القرمشة.",
-        image: "/images/appetizers/hwawshi.png",
+        image: "/images/appetizers/hwawshi.webp",
 
 
       },
@@ -128,7 +128,7 @@ export const menu: MenuCategory[] = [
         price: 200,
         unit: "1 كيلو",
         description: "1 كيلو – باذنجان مطهو مع صلصة الطماطم والثوم بطعم بيتي غني.",
-        image: "/images/appetizers/msaka.png",
+        image: "/images/appetizers/msaka.webp",
 
 
       },
@@ -145,7 +145,7 @@ export const menu: MenuCategory[] = [
         price: 250,
         unit: "1 كيلو",
         description: "1 كيلو – أوراق عنب طرية محشوة بالأرز والأعشاب العطرية.",
-        image: "/images/mahshi/warkEnab.png",
+        image: "/images/mahshi/warkEnab.webp",
 
 
         isTopSeller: true
@@ -157,7 +157,7 @@ export const menu: MenuCategory[] = [
         price: 200,
         unit: "1 كيلو",
         description: "1 كيلو – أوراق كرنب طرية محشوة بالأرز والصلصة بطعم بيتي أصيل.",
-        image: "/images/mahshi/kronb.png",
+        image: "/images/mahshi/kronb.webp",
 
 
 
@@ -169,7 +169,7 @@ export const menu: MenuCategory[] = [
         price: 200,
         unit: "1 كيلو",
         description: "1 كيلو – باذنجان محشو بالأرز المتبل بنكهات مصرية مميزة.",
-        image: "/images/mahshi/btngan.png",
+        image: "/images/mahshi/btngan.webp",
 
 
 
@@ -180,7 +180,7 @@ export const menu: MenuCategory[] = [
         price: 200,
         unit: "1 كيلو",
         description: "1 كيلو – كوسة طرية محشوة بالأرز المتبل بطعم شهي.",
-        image: "/images/mahshi/kosa.png",
+        image: "/images/mahshi/kosa.webp",
 
 
 
@@ -191,7 +191,7 @@ export const menu: MenuCategory[] = [
         price: 200,
         unit: "1 كيلو",
         description: "1 كيلو – فلفل محشو بالأرز والبهارات المصرية الأصيلة.",
-        image: "/images/mahshi/flfl.png",
+        image: "/images/mahshi/flfl.webp",
 
 
       },
@@ -201,7 +201,7 @@ export const menu: MenuCategory[] = [
         price: 200,
         unit: "1 كيلو",
         description: "1 كيلو – تشكيلة متنوعة من أشهى أطباق المحاشي في طبق واحد.",
-        image: "/images/mahshi/mixMahashi.png",
+        image: "/images/mahshi/mixMahashi.webp",
 
 
 
@@ -212,7 +212,7 @@ export const menu: MenuCategory[] = [
         price: 300,
         unit: "1 كيلو",
         description: "1 كيلو – أمعاء محشوة بالأرز والخلطة المصرية المميزة، طبق تقليدي أصيل.",
-        image: "/images/mahshi/mombar.png",
+        image: "/images/mahshi/mombar.webp",
 
 
 
@@ -229,7 +229,7 @@ export const menu: MenuCategory[] = [
         name: "صينية رقاق",
         price: 500,
         description: "رقاق مقرمش باللحم المفروم بطعم شرقي أصيل.",
-        image: "/images/swani/rokak.png",
+        image: "/images/swani/rokak.webp",
 
 
       },
@@ -238,7 +238,7 @@ export const menu: MenuCategory[] = [
         name: "صينية جولاش",
         price: 500,
         description: "طبقات ذهبية مقرمشة محشوة باللحم المتبل.",
-        image: "/images/swani/goulash.png",
+        image: "/images/swani/goulash.webp",
 
 
       },
@@ -247,7 +247,7 @@ export const menu: MenuCategory[] = [
         name: "صينية مكرونة بشاميل",
         price: 500,
         description: "مكرونة بطبقات من البشاميل الكريمي واللحم المفروم.",
-        image: "/images/swani/macronaBshamel.png",
+        image: "/images/swani/macronaBshamel.webp",
 
 
       },
@@ -256,7 +256,7 @@ export const menu: MenuCategory[] = [
         name: "صينية كوسة بشاميل",
         price: 450,
         description: "كوسة طازجة مغطاة بصوص البشاميل الغني والشهي.",
-        image: "/images/swani/kosaBshamel.png",
+        image: "/images/swani/kosaBshamel.webp",
 
 
       },
@@ -273,7 +273,7 @@ export const menu: MenuCategory[] = [
         price: 400,
         unit: "جوز",
         description: "جوز – حمام بلدي طري محشو بالأرز المتبل بالطريقة المصرية.",
-        image: "/images/dwagn/hamam.png",
+        image: "/images/dwagn/hamam.webp",
 
 
       },
@@ -283,7 +283,7 @@ export const menu: MenuCategory[] = [
         price: 430,
         unit: "جوز",
         description: "جوز – حمام بلدي محشو بالفريك المصري الشهي ذو النكهة المميزة.",
-        image: "/images/dwagn/hamam.png",
+        image: "/images/dwagn/hamam.webp",
 
 
       },
@@ -293,7 +293,7 @@ export const menu: MenuCategory[] = [
         price: 500,
         unit: "جوز",
         description: "جوز – حمام بلدي جامبو محشو بالأرز المتبل، حجم أكبر ومذاق أغنى.",
-        image: "/images/dwagn/hamam.png",
+        image: "/images/dwagn/hamam.webp",
 
 
       },
@@ -303,7 +303,7 @@ export const menu: MenuCategory[] = [
         price: 550,
         unit: "جوز",
         description: "جوز – حمام بلدي جامبو محشو بالفريك المصري، حجم أكبر ومذاق أغنى.",
-        image: "/images/dwagn/hamam.png",
+        image: "/images/dwagn/hamam.webp",
 
 
       },
@@ -312,7 +312,7 @@ export const menu: MenuCategory[] = [
         name: "فراخة مشوية",
         price: 400,
         description: "دجاج متبل بتتبيلة خاصة ومشوي على الفحم حتى اللون الذهبي.",
-        image: "/images/dwagn/chikenGrilled.png",
+        image: "/images/dwagn/chikenGrilled.webp",
 
 
       },
@@ -321,7 +321,7 @@ export const menu: MenuCategory[] = [
         name: "فراخ بلدي محشية أرز محمرة",
         price: 450,
         description: "فراخ بلدي طرية محشوة بأرز متبل ومحمرة بالفرن بالنكهات المصرية الأصيلة.",
-        image: "/images/dwagn/chikWithRice.png",
+        image: "/images/dwagn/chikWithRice.webp",
 
 
       },
@@ -329,7 +329,7 @@ export const menu: MenuCategory[] = [
         id: "duck",
         name: "بط",
         description: "السعر حسب سعر اليوم – بط بلدي مطهو ببطء حتى يصبح طريًا وغنيًا بالمذاق.",
-        image: "/images/dwagn/duck.png",
+        image: "/images/dwagn/duck.webp",
         price: 850
 
       },
@@ -339,7 +339,7 @@ export const menu: MenuCategory[] = [
         price: 400,
         unit: "1 كيلو",
         description: "1 كيلو – شرائح صدور دجاج متبلة ومغطاة بطبقة مقرمشة ذهبية.",
-        image: "/images/dwagn/chikenBani.png",
+        image: "/images/dwagn/chikenBani.webp",
 
 
       },
@@ -349,7 +349,7 @@ export const menu: MenuCategory[] = [
         price: 400,
         unit: "1 كيلو",
         description: "1 كيلو – قطع دجاج متبلة بالزبادي والتوابل ومشوية بإتقان.",
-        image: "/images/dwagn/shesh.png",
+        image: "/images/dwagn/shesh.webp",
 
 
       },
@@ -366,7 +366,7 @@ export const menu: MenuCategory[] = [
         price: 850,
         unit: "1 كيلو",
         description: "1 كيلو – قطع لحم طرية مطهوة مع البصل والتوابل الشرقية.",
-        image: "/images/beef/beefWithOnion.png",
+        image: "/images/beef/beefWithOnion.webp",
 
 
         isTopSeller: true
@@ -377,7 +377,7 @@ export const menu: MenuCategory[] = [
         price: 800,
         unit: "1 كيلو",
         description: "1 كيلو – شرائح لحم مشوية ومتبلة بتتبيلة خاصة.",
-        image: "/images/beef/steak.png",
+        image: "/images/beef/steak.webp",
 
 
       },
@@ -387,7 +387,7 @@ export const menu: MenuCategory[] = [
         price: 800,
         unit: "1 كيلو",
         description: "1 كيلو – كفتة لحم بلدي مشوية على الفحم بنكهة مميزة.",
-        image: "/images/beef/kofta.png",
+        image: "/images/beef/kofta.webp",
 
 
         isTopSeller: true
@@ -398,7 +398,7 @@ export const menu: MenuCategory[] = [
         price: 450,
         unit: "1 كيلو",
         description: "1 كيلو – كفتة مصرية بالأرز والبهارات، مقرمشة من الخارج وطرية من الداخل.",
-        image: "/images/beef/koftaRice.png",
+        image: "/images/beef/koftaRice.webp",
 
 
       },
@@ -408,7 +408,7 @@ export const menu: MenuCategory[] = [
         price: 850,
         unit: "1 كيلو",
         description: "1 كيلو – شرائح لحم متبلة ومغطاة بالبقسماط الذهبي المقرمش.",
-        image: "/images/beef/beftek.png",
+        image: "/images/beef/beftek.webp",
 
 
       },
@@ -419,7 +419,7 @@ export const menu: MenuCategory[] = [
         price: 750,
         unit: "1 كيلو",
         description: "1 كيلو – سجق شرقي متبل بالفلفل والثوم والطماطم على الطريقة الإسكندرانية.",
-        image: "/images/beef/sausageAlex.png",
+        image: "/images/beef/sausageAlex.webp",
 
 
       },
@@ -429,7 +429,7 @@ export const menu: MenuCategory[] = [
         price: 750,
         unit: "1 كيلو",
         description: "1 كيلو – كبدة طازجة متبلة بالثوم والفلفل الحار على الطريقة الإسكندرانية.",
-        image: "/images/beef/kebdaAlex.png",
+        image: "/images/beef/kebdaAlex.webp",
 
 
       },
@@ -438,7 +438,7 @@ export const menu: MenuCategory[] = [
         name: "برجر",
         price: 900,
         description: "1 كيلو – برجر لحم بلدي مشوي بطعم غني وشهي..",
-        image: "/images/beef/burger.png",
+        image: "/images/beef/burger.webp",
 
 
       },
@@ -455,7 +455,7 @@ export const menu: MenuCategory[] = [
         price: 150,
         unit: "1 كيلو",
         description: "1 كيلو – أرز مصري أبيض مطهو بحبات مفلفلة.",
-        image: "/images/sides/whiteRice.png",
+        image: "/images/sides/whiteRice.webp",
 
 
       },
@@ -465,7 +465,7 @@ export const menu: MenuCategory[] = [
         price: 150,
         unit: "1 كيلو",
         description: "1 كيلو – أرز مصري بالشعيرية المحمرة بطعم بيتي أصيل.",
-        image: "/images/sides/riceWithSheraya.png",
+        image: "/images/sides/riceWithSheraya.webp",
 
 
       },
@@ -475,7 +475,7 @@ export const menu: MenuCategory[] = [
         price: 230,
         unit: "1 كيلو",
         description: "1 كيلو – أرز بسمتي طويل الحبة بنكهة مميزة.",
-        image: "/images/sides/yellowRice.png",
+        image: "/images/sides/yellowRice.webp",
 
 
       },
@@ -485,7 +485,7 @@ export const menu: MenuCategory[] = [
         price: 350,
         unit: "1 كيلو",
         description: "1 كيلو – أرز بسمتي فاخر مزين بالمكسرات المحمصة.",
-        image: "/images/sides/basmatyWithMksrat.png",
+        image: "/images/sides/basmatyWithMksrat.webp",
 
 
       },
@@ -494,7 +494,7 @@ export const menu: MenuCategory[] = [
         name: "بطاطس بوم فريت محمرة",
         price: 100,
         description: "أصابع بطاطس مقلية ذهبية ومقرمشة.",
-        image: "/images/sides/potato.png",
+        image: "/images/sides/potato.webp",
 
 
       },
@@ -503,7 +503,7 @@ export const menu: MenuCategory[] = [
         name: "طاجن أرز معمر بالقشطة البلدي",
         price: 200,
         description: "أرز مصري مخبوز بالقشطة البلدي حتى يكتسب وجهًا ذهبيًا شهيًا.",
-        image: "/images/sides/riceWithMilk.png",
+        image: "/images/sides/riceWithMilk.webp",
 
 
       },
