@@ -13,7 +13,7 @@ type CardProps = {
 function Card({ id, img, name, price, categorySlug }: CardProps) {
     return (
         <Link href={`/menu/${categorySlug}/${id}`}>
-            <div className="group w-full rounded-3xl overflow-hidden hover:border-2 hover:border-primary transition-all duration-300 h-full bg-background">
+            <div className="group w-full rounded-3xl overflow-hidden border-2 border-primary transition-all duration-300 h-full bg-background">
                 <div>
                     <div className="border-b-4 border-primary">
                         <Image
@@ -22,6 +22,7 @@ function Card({ id, img, name, price, categorySlug }: CardProps) {
                             height={300}
                             width={300}
                             className="h-70 mx-auto  brightness-80 scale-105 transition-all duration-300 group-hover:brightness-100 group-hover:scale-100 object-contain"
+                            placeholder="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8WKReDwAF8QILlMDYSAAAAABJRU5ErkJggg=="
                         />
                     </div>
                     <div className="p-8">
@@ -32,12 +33,12 @@ function Card({ id, img, name, price, categorySlug }: CardProps) {
                             <div className="flex gap-1">
                                 <Typography
                                     color="primary"
-                                    size="xl"
+                                    size="xxl"
                                     weight="semibold"
                                 >
                                     {price}
                                 </Typography>
-                                <Typography color="primary" weight="semibold">
+                                <Typography color="primary" weight="semibold" className="text-xl">
                                     ج.م
                                 </Typography>
                             </div>

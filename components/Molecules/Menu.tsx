@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { menu } from "@/data";
 import Card from "../Molecules/Card";
 
-function Menu() {
+function AMenu() {
     const scrollRef = useRef<HTMLDivElement>(null);
     const isDraggingRef = useRef(false);
     const startX = useRef(0);
@@ -94,4 +94,4 @@ function Menu() {
     );
 }
 
-export default Menu;
+export default AMenu;

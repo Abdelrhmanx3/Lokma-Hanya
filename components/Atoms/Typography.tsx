@@ -21,7 +21,7 @@ function Typography({
         md: "text-md [letter-spacing:0.25px]",
         lg: "text-lg [letter-spacing:0.15px]",
         xl: "text-xl [letter-spacing:0px]",
-        xxl: "text-[58px] [letter-spacing:-0.5px]",
+        xxl: "text-[40px] [letter-spacing:-0.5px]",
     }[size];
     const selectedweight = {
         light: "font-light",

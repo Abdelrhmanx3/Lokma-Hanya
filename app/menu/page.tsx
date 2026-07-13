@@ -1,7 +1,7 @@
-import Menu from "@/components/Molecules/Menu";
+import AMenu from "@/components/Molecules/Menu";
 
 function page() {
-    return <Menu />;
+    return <AMenu />;
 }
 
 export default page;
