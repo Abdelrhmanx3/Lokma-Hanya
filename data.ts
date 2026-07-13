@@ -404,7 +404,7 @@ export const menu: MenuCategory[] = [
       },
       {
         id: "beef-tek",
-        name: "بوفتيك",
+        name: "بفتيك",
         price: 850,
         unit: "1 كيلو",
         description: "1 كيلو – شرائح لحم متبلة ومغطاة بالبقسماط الذهبي المقرمش.",
