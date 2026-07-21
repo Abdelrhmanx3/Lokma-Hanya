@@ -1,6 +1,11 @@
+"use client";
 import Image from "next/image";
 import Typography from "../Atoms/Typography";
 import Link from "next/link";
+import { useCart } from "@/app/providers/CartContext";
+import { useState } from "react";
+import { Button } from "../ui/button";
+import { Add01Icon, MinusSignIcon, ShoppingCartAdd02Icon } from "hugeicons-react";
 
 type CardProps = {
     id: string;
@@ -10,11 +15,18 @@ type CardProps = {
     categorySlug?: string;
 };
 
-function Card({ id, img, name, price, categorySlug }: CardProps) {
+function Card({ id, img = "", name, price = 800, categorySlug = "" }: CardProps) {
+    const { addToCart } = useCart();
+    const [quantity, setQuantity] = useState(1);
+
+    function handleAdd() {
+        addToCart({ id, categorySlug, name, price, img }, quantity);
+        setQuantity(1);
+    }
     return (
-        <Link href={`/menu/${categorySlug}/${id}`}>
-            <div className="group w-full rounded-3xl overflow-hidden border-2 border-primary transition-all duration-300 h-full bg-background">
-                <div>
+        <div className="group w-full rounded-3xl overflow-hidden border-2 border-primary transition-all duration-300 h-full bg-background">
+            <div>
+                <Link href={`/menu/${categorySlug}/${id}`}>
                     <div className="border-b-4 border-primary">
                         <Image
                             src={img ?? "/images/placeholder.png"}
@@ -25,7 +37,7 @@ function Card({ id, img, name, price, categorySlug }: CardProps) {
                             placeholder="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8WKReDwAF8QILlMDYSAAAAABJRU5ErkJggg=="
                         />
                     </div>
-                    <div className="p-8">
+                    <div className="px-4 py-1.5">
                         <div className="flex items-center justify-between mb-3">
                             <Typography size="xl" weight="bold">
                                 {name}
@@ -44,9 +56,36 @@ function Card({ id, img, name, price, categorySlug }: CardProps) {
                             </div>
                         </div>
                     </div>
+                </Link>
+                <div className="flex items-center px-4 mb-4 justify-between w-full">
+
+                    <div className="flex items-center bg-primary w-fit rounded-full ">
+                        <button
+                            onClick={() => setQuantity((q) => q + 1)}
+                            className="size-10 flex items-center justify-center transition-colors duration-300 cursor-pointer hover:bg-[#de651e] rounded-tr-full rounded-br-full"
+                        >
+                            <Add01Icon className="size-6 pointer-events-none" />
+                        </button>
+                        <span className="w-6 text-center font-bold tabular-nums text-xl">
+                            {quantity}
+                        </span>
+                        <button
+                            onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                            className="size-10 flex items-center justify-center hover:text-black dark:hover:text-white transition-colors duration-300 cursor-pointer  hover:bg-[#de651e] rounded-tl-full rounded-bl-full"
+                        >
+                            <MinusSignIcon className="w-4 h-4 pointer-events-none" />
+                        </button>
+                    </div>
+                    <Button
+                        onClick={handleAdd}
+                        className="font-bold cursor-pointer text-lg text-white hover:bg-[#de651e]! p-5"
+                    >
+                        <ShoppingCartAdd02Icon className="size-4" />
+                        <Typography size="xs">اضف للسلة</Typography>
+                    </Button>
                 </div>
             </div>
-        </Link>
+        </div>
     );
 }
 

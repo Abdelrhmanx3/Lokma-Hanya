@@ -1,8 +1,9 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { menu } from "@/data";
 import Card from "../Molecules/Card";
+import { ArrowLeft01Icon, ArrowRight01Icon } from "hugeicons-react";
 
 function AMenu() {
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -11,6 +12,8 @@ function AMenu() {
     const scrollLeft = useRef(0);
     const [isDragging, setIsDragging] = useState(false); // drives cursor style
     const [dragged, setDragged] = useState(false); // drives click-suppression
+    const LeftArrow = useRef<HTMLDivElement>(null);
+    const RightArrow = useRef<HTMLDivElement>(null);
 
     const onMouseDown = (e: React.MouseEvent) => {
         if (!scrollRef.current) return;
@@ -42,12 +45,41 @@ function AMenu() {
         }
     };
 
+    const handleScrollButton = () => {
+        scrollRef.current?.scrollBy({
+            left: -45,
+            behavior: "smooth",
+        });
+        const isEnd = Math.ceil(Math.abs(scrollRef.current?.scrollLeft ?? 0)) + 50 >= (scrollRef.current?.scrollWidth ?? 0) - (scrollRef.current?.clientWidth ?? 0)
+        if (isEnd) {
+            LeftArrow.current!.style.display = "none";
+        }
+        RightArrow.current!.style.display = "block";
+
+    }
+    const handleScrollButtonRight = () => {
+        scrollRef.current?.scrollBy({
+            left: 45,
+            behavior: "smooth",
+        });
+        console.log(scrollRef.current?.scrollLeft)
+        const isStart = Math.floor(scrollRef.current!.scrollLeft) === 0
+        if (isStart) {
+            RightArrow.current!.style.display = "none";
+        }
+        LeftArrow.current!.style.display = "block";
+
+    }
+
+
+
+
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 min-w-0 overflow-hidden w-full">
             <Tabs defaultValue={menu[0].slug} className="w-full" dir="rtl">
                 <div
                     ref={scrollRef}
-                    className="mb-6 sm:mb-8 overflow-x-auto scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 select-none"
+                    className="mb-6 sm:mb-8 overflow-x-auto scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 select-none relative"
                     style={{ cursor: isDragging ? "grabbing" : "grab" }}
                     onMouseDown={onMouseDown}
                     onMouseMove={onMouseMove}
@@ -59,6 +91,20 @@ function AMenu() {
                         className="w-max min-w-full sm:min-w-0 justify-start
                         flex-nowrap gap-1 sm:gap-2 h-auto p-1 bg-transparent"
                     >
+                        {/* <span className="absolute inset-0 z-10 [background:linear-gradient(270deg,transparent_57%,#0a0a0a_76%)]"></span> */}
+
+                        <span className="fixed left-0 block md:hidden z-10 cursor-pointer pr-2 [background:linear-gradient(270deg,transparent,black_40%)]"
+                            onClick={handleScrollButton}
+                            ref={LeftArrow}
+                        >
+                            <ArrowLeft01Icon strokeWidth={4} className="pointer-events-none" />
+                        </span>
+                        <span className="fixed right-0 hidden z-10 cursor-pointer pl-2 [background:linear-gradient(270deg,black,black_40%)]"
+                            onClick={handleScrollButtonRight}
+                            ref={RightArrow}
+                        >
+                            <ArrowRight01Icon strokeWidth={4} className="pointer-events-none" />
+                        </span>
                         {menu.map((category) => (
                             <TabsTrigger
                                 key={category.id}

@@ -20,7 +20,7 @@ async function Page({ params }: PageProps) {
     }
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-16" dir="rtl">
+        <div className="max-w-7xl mx-auto px-4 pt-16 py-6" dir="rtl">
             <Link
                 href={`/menu`}
                 className="inline-flex items-center gap-2 text-neutral-500 hover:text-primary transition-colors mb-6"

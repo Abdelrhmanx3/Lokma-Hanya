@@ -5,6 +5,7 @@ import { CartProvider } from "./providers/CartContext";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Organism/Navbar";
 import { ThemeProvider } from "@/components/Molecules/ThemeProvider";
+import CartSidebar from "@/components/Atoms/CartSidebar";
 const balooBhaijaan = Baloo_Bhaijaan_2({
     subsets: ["arabic"],
     weight: ["400", "500", "600", "700", "800"],
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     icons: {
         icon: "public/logo.png",
     },
+    keywords:["لقمة هنية",""]
 };
 
 export default function RootLayout({
@@ -49,7 +51,8 @@ export default function RootLayout({
                         enableSystem
                     >
                         <Navbar />
-                        {children}
+                        <CartSidebar/>
+                        <main className="max-md:mb-20">{children}</main>
                     </ThemeProvider>
                 </CartProvider>
             </body>

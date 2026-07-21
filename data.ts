@@ -327,10 +327,10 @@ export const menu: MenuCategory[] = [
       },
       {
         id: "duck",
-        name: "بط",
+        name: "بط 3ك",
         description: "السعر حسب سعر اليوم – بط بلدي مطهو ببطء حتى يصبح طريًا وغنيًا بالمذاق.",
         image: "/images/dwagn/duck.webp",
-        price: 850
+        price: 800
 
       },
       {

@@ -1,11 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Moon02Icon, Sun03Icon } from "hugeicons-react";
-import { Button } from "../ui/button";
 import { useTheme } from "next-themes";
 
 function ThemeToggle() {
-    const { theme, setTheme } = useTheme();
+    const { resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -13,24 +12,18 @@ function ThemeToggle() {
     }, []);
 
     if (!mounted) {
-        return (
-            <div className="w-9 h-9" />
-        );
+        return <div className="w-9 h-9" />;
     }
 
     return (
-        <div>
-            <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                variant={"ghost"}
-                className="cursor-pointer"
+        <div className="">
+            <button
+                onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+                className="cursor-pointer hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 p-1.5 rounded-full flex items-center justify-center group"
             >
-                {theme === "dark" ? (
-                    <Sun03Icon className="w-5! h-5!" />
-                ) : (
-                    <Moon02Icon className="w-5! h-5!" />
-                )}
-            </Button>
+                <Sun03Icon className="size-5 hidden dark:block group-hover:text-primary" />
+                <Moon02Icon className="size-5 block dark:hidden group-hover:text-primary" />
+            </button>
         </div>
     );
 }
