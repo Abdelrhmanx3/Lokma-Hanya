@@ -62,16 +62,16 @@ function Card({ id, img = "", name, price = 800, categorySlug = "" }: CardProps)
                     <div className="flex items-center bg-primary w-fit rounded-full ">
                         <button
                             onClick={() => setQuantity((q) => q + 1)}
-                            className="size-10 flex items-center justify-center transition-colors duration-300 cursor-pointer hover:bg-[#de651e] rounded-tr-full rounded-br-full"
+                            className="size-10 flex items-center justify-center transition-colors duration-300 cursor-pointer hover:bg-[#de651e] rounded-tr-full rounded-br-full text-white"
                         >
                             <Add01Icon className="size-6 pointer-events-none" />
                         </button>
-                        <span className="w-6 text-center font-bold tabular-nums text-xl">
+                        <span className="w-6 text-center font-bold tabular-nums text-xl text-white">
                             {quantity}
                         </span>
                         <button
                             onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                            className="size-10 flex items-center justify-center hover:text-black dark:hover:text-white transition-colors duration-300 cursor-pointer  hover:bg-[#de651e] rounded-tl-full rounded-bl-full"
+                            className="size-10 flex items-center justify-center  text-white transition-colors duration-300 cursor-pointer  hover:bg-[#de651e] rounded-tl-full rounded-bl-full"
                         >
                             <MinusSignIcon className="w-4 h-4 pointer-events-none" />
                         </button>

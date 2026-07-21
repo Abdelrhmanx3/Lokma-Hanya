@@ -15,6 +15,23 @@ function AMenu() {
     const LeftArrow = useRef<HTMLDivElement>(null);
     const RightArrow = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        const el = scrollRef.current;
+        if (!el) return;
+
+        const handleScroll = () => {
+            const isEnd = Math.ceil(Math.abs(el.scrollLeft)) + 50 >= el.scrollWidth - el.clientWidth;
+            const isStart = Math.floor(el.scrollLeft) === 0;
+
+            if (LeftArrow.current) LeftArrow.current.style.display = isEnd ? "none" : "block";
+            if (RightArrow.current) RightArrow.current.style.display = isStart ? "none" : "block";
+        };
+
+        handleScroll(); // set initial state
+        el.addEventListener("scroll", handleScroll);
+        return () => el.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const onMouseDown = (e: React.MouseEvent) => {
         if (!scrollRef.current) return;
         isDraggingRef.current = true;
@@ -62,7 +79,6 @@ function AMenu() {
             left: 45,
             behavior: "smooth",
         });
-        console.log(scrollRef.current?.scrollLeft)
         const isStart = Math.floor(scrollRef.current!.scrollLeft) === 0
         if (isStart) {
             RightArrow.current!.style.display = "none";
@@ -93,13 +109,13 @@ function AMenu() {
                     >
                         {/* <span className="absolute inset-0 z-10 [background:linear-gradient(270deg,transparent_57%,#0a0a0a_76%)]"></span> */}
 
-                        <span className="fixed left-0 block md:hidden z-10 cursor-pointer pr-2 [background:linear-gradient(270deg,transparent,black_40%)]"
+                        <span className="fixed left-0 block md:hidden z-10 cursor-pointer pr-2 dark:[background:linear-gradient(270deg,transparent,black_40%)] [background:linear-gradient(270deg,transparent,white_40%)]"
                             onClick={handleScrollButton}
                             ref={LeftArrow}
                         >
                             <ArrowLeft01Icon strokeWidth={4} className="pointer-events-none" />
                         </span>
-                        <span className="fixed right-0 hidden z-10 cursor-pointer pl-2 [background:linear-gradient(270deg,black,black_40%)]"
+                        <span className="fixed right-0 hidden z-10 cursor-pointer pl-2 dark:[background:linear-gradient(270deg,black,black_40%)] [background:linear-gradient(270deg,white,white_40%)]"
                             onClick={handleScrollButtonRight}
                             ref={RightArrow}
                         >

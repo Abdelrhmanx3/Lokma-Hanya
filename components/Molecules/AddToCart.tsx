@@ -36,7 +36,7 @@ function AddToCart({ id, categorySlug, name, price, img }: AddToCartProps) {
                     </span>
                     <button
                         onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                        className="size-10 flex items-center justify-center hover:text-black dark:hover:text-white transition-colors duration-300 cursor-pointer hover:shadow-[inset_3px_4px_10px_-6px_black] hover:bg-[#de651e] rounded-tl-full rounded-bl-full"
+                        className="size-10 flex items-center justify-center text-white transition-colors duration-300 cursor-pointer hover:shadow-[inset_3px_4px_10px_-6px_black] hover:bg-[#de651e] rounded-tl-full rounded-bl-full"
                     >
                         <MinusSignIcon className="w-4 h-4 pointer-events-none" />
                     </button>
