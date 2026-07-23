@@ -16,7 +16,6 @@ import CheckoutPage from "./CheckoutPage";
 function Cart() {
     const { isOpen, setIsOpen, items, removeFromCart, updateQuantity } =
         useCart();
-
     const [isCheckoutOpen, setIsCheckoutOpen] = useState(false); // 👈 new
 
 

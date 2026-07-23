@@ -43,7 +43,7 @@ export default function RootLayout({
                 <meta name="apple-mobile-web-app-title" content="MyWebSite" />
                 <link rel="manifest" href="/site.webmanifest" />
             </head>
-            <body className="min-h-full flex flex-col">
+            <body className="min-h-full flex flex-col" suppressHydrationWarning>
                 <CartProvider>
                     <ThemeProvider
                         attribute={"class"}

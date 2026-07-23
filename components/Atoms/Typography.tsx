@@ -6,6 +6,7 @@ type TypographyProps = {
     weight?: "light" | "normal" | "semibold" | "bold";
     color?: "black" | "primary" | "red" | "icon" | "white";
     className?: string;
+    dir?: "ltr" | "rtl";
 };
 
 function Typography({
@@ -13,6 +14,7 @@ function Typography({
     weight = "normal",
     color = "black",
     className,
+    dir,
     children,
 }: TypographyProps) {
     const selectedSize = {
@@ -43,7 +45,11 @@ function Typography({
         className,
     ])();
     if (size === "xxl") return <h1 className={classes}>{children}</h1>;
-    return <p className={classes}>{children}</p>;
+    return (
+        <p className={classes} dir={dir}>
+            {children}
+        </p>
+    );
 }
 
 export default Typography;
